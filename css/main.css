@@ -1,0 +1,535 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.main{
+    margin-top: 100px; 
+}
+
+
+.show_all{
+    display: block;
+}
+
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+  
+.card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px;
+}
+  
+/*ĐẶT VÉ khách sạn*/
+.hotel-card:hover {
+    transform: translateY(-5px);
+}
+.hotel-card{
+    width: 280px !important;
+    height: 380px;
+    margin: 10px;
+    transition: transform 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.search_hotels{
+    width: 350px;
+    height: 40px;
+}
+
+.btn_search{
+    width: 130px;
+    height: 40px;
+}
+
+/*ĐẶT VÉ tour */
+.tour-card{
+    width: 300px;
+    height: 340px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+.btn_select_tour{
+    border-radius: 20px;
+}
+
+/*ĐẶT VÉ MÁY BAY*/
+.flight{
+  margin: 30px 0 100px 0;
+  width: 1200px;
+}
+.flight-card {
+    width: 275px !important;
+    height: 290px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+.flight-info {
+  padding: 8px 10px; /* giảm padding để card gọn hơn */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.flight-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.2rem; /* tăng size chữ */
+  font-weight: 600;
+}
+
+.flight-info p {
+  margin: 0;
+  font-size: 1rem; /* tăng size chữ */
+  color: #ff6600;
+}
+
+.flight-info .note {
+  font-size: 1rem; /* chữ nhỏ hơn, ghi chú */
+  color: #888;
+  margin-bottom: 2px; /* giảm khoảng cách */
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #000;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.flight-card:hover {
+    transform: translateY(-5px);
+}
+
+.flight-card img {
+    width: 100%; 
+    height: 180px;
+    object-fit: cover;
+}
+.btn_select_flight{
+  border-radius: 20px;
+}
+.card-body h5 {
+    font-size: 1.1rem;
+}
+
+.card-body p {
+    font-size: 0.95rem;
+}
+.hidden-card {
+    display: none !important;
+}
+
+/* location */
+.location-card{
+    padding: 0;
+    margin-right:15px ;
+    width: 240px;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.destination-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .destination-card:hover {
+    transform: scale(1.03);
+  }
+  .destination-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+  .destination-card h5 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .destination-card h5 img {
+    width: 20px;
+    height: 14px;
+    margin-left: 6px;
+  }
+
+
+/*pageDetail*/
+.hotel-info .card-body {
+  height: 260px;
+
+}
+
+.hotel-info .old-price {
+  margin-bottom: 0.2rem;
+}
+
+.hotel-info .new-price {
+  letter-spacing: 0.5px;
+}
+
+.hotel-info .badge {
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Tổng thể: 40% + 60%, cao cố định 340px */
+.gallery-340{
+    display: grid;
+    grid-template-columns: 2fr 3fr;   /* ~ 4 phần và 6 phần */
+    gap: 12px;                        /* khoảng cách giữa các khối */
+    height: 340px;                    /* chiều cao cố định */
+    overflow: hidden;                 /* cắt phần thừa (nếu có) */
+    cursor: pointer;
+  }
+  
+  /* Ảnh lớn */
+  .gallery-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+  
+  /* Khối bên phải: 3 cột x 2 hàng đều nhau */
+  .gallery-right{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr); /* mỗi ảnh cùng chiều cao */
+    gap: 12px;
+    grid-auto-flow: dense;              /* thiếu ảnh vẫn dồn kín, không lệch hàng */
+  }
+  .gallery-right .tile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+  .tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  /* Overlay cho ô cuối */
+  .tile.overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 12px;
+  
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 1;
+    text-align: center;
+  }
+  /* Thêm lớp phủ mờ khi hover */
+
+/* Áp dụng chung cho ảnh lớn và ảnh nhỏ */
+.gallery-left,
+.tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.gallery-left img,
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease; /* hiệu ứng phóng to */
+}
+
+
+
+/* Thêm lớp phủ mờ khi hover */
+.gallery-left::after,
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  border-radius: 12px;
+}
+
+.gallery-left:hover::after,
+.tile:hover::after {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* Overlay cho ô cuối */
+.tile.overlay::after {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.tile.overlay:hover::after {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+
+  /* Responsive: màn nhỏ xếp dọc, bỏ cố định cao */
+  @media (max-width: 768px){
+    .gallery-340{
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+    .gallery-right{
+      grid-template-rows: none;
+      grid-auto-rows: 160px; /* mỗi ảnh ~160px trên mobile */
+    }
+  }
+
+
+  /*tour-detail*/
+  body { background-color: #f8f9fa; }
+  .tour-banner img { width: 100%; height: 400px; object-fit: cover; border-radius: 10px; }
+  .tour-title { font-size: 1.8rem; font-weight: bold; }
+  .price { font-size: 1.5rem; color: #e63946; font-weight: bold; }
+  .sidebar-card { position: sticky; top: 100px; margin-top: 20px;}
+  .tab-content { background: #fff; padding: 20px; border-radius: 8px; }
+  .tour-suggestion img { height: 180px; object-fit: cover; border-radius: 8px; }
+
+
+.gallery {
+  width: 100%;
+  margin: 0 12px 12px 0;
+}
+
+.gallery-main {
+  height: 80%;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.gallery-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.gallery-thumbnails {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.gallery-thumbnails div {
+  flex: 1;
+  padding: 5px;
+}
+
+.gallery-thumbnails img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gallery-control {
+  position: absolute;
+  color: white;
+  top: 50%;
+  font-size: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.gallery-control-prev {
+  left: 10px;
+}
+
+.gallery-control-next {
+  right: 10px;
+}
+
+.gallery-thumbnails div.gallery-active {
+  border: 3px solid #e63946; 
+  border-radius: 6px;
+  transform: scale(1.05);      
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+
+/* khi sang trái */
+.gallery-slide-left {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+
+/* khi sang phải */
+.gallery-slide-right {
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+#ticketsContainer {
+  max-height: 400px;   /* Chiều cao tối đa */
+  overflow-y: auto;    /* Cho phép cuộn dọc */
+  padding-right: 5px;  /* tránh đè scrollbar lên nội dung */
+}
+
+/* Làm scrollbar đẹp hơn */
+#ticketsContainer::-webkit-scrollbar {
+  width: 6px;
+}
+#ticketsContainer::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+#ticketsContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.date-list {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+.date-item {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 15px;
+  background: #fff;
+  cursor: pointer;
+  text-align: center;
+  min-width: 100px;
+}
+.date-item.active {
+  border: 1px solid #007bff;
+  background: #e9f4ff;
+  color: #007bff;
+  font-weight: bold;
+}
+.ticket-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.ticket-title {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 8px;
+  margin-right: 80px;
+}
+.ticket-desc {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.ticket-extra {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 10px;
+}
+.ticket-price {
+  font-size: 20px;
+  color: #f60;
+  font-weight: bold;
+}
+.ticket-old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 14px;
+  margin-left: 8px;
+}
+.discount {
+  color: #f00;
+  font-size: 12px;
+  background: #ffeaea;
+  border-radius: 4px;
+  padding: 2px 5px;
+  margin-left: 6px;
+}
+.btn-select {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: right;
+}
+.top-pick {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #1e90ff;
+  color: white;
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-weight: bold;
+}

@@ -1,0 +1,194 @@
+body { font-family: 'Segoe UI', sans-serif; margin:0; background:#f5f7fa; color:#333; }
+
+/* Hero */
+.theme {
+    height:100vh;
+   
+    display:flex; justify-content:center; align-items:center;
+    text-align:center; color:white; padding:0 20px;
+  }
+  .theme h2 { font-size:60px; margin-bottom:20px; }
+  .btn { background:#ffd369; color:#333; padding:12px 25px; border-radius:30px; text-decoration:none; font-weight:bold; }
+  .btn:hover { background:#ffb703; }
+
+  .container { width:90%; max-width:1200px; margin:auto; padding:80px 0; }
+  section { margin-bottom:100px; }
+  section h2 { font-size:28px; margin-bottom:25px; color:#ff6f61; }
+
+  /* Tổng quan */
+  #overview {
+    background:url("https://upload.wikimedia.org/wikipedia/commons/c/c4/Flag_tower_of_Hanoi_2022.jpg") center/cover no-repeat;
+    color:white; text-align:center; padding:120px 20px; border-radius:15px;
+  }
+  #overview h2 { color:#ffd369; }
+
+  /* Khách sạn - scroll ngang */
+  .hotel-scroll {
+    display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory;
+    padding-bottom:10px;
+  }
+  .hotel-card {
+    flex:0 0 300px; scroll-snap-align:start;
+    background:white; border-radius:15px; overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+  }
+  .hotel-card img { width:100%; height:180px; object-fit:cover; }
+  .hotel-card:hover { transform:translateY(-10px); }
+
+  /* Tham quan - mosaic */
+  .places-section {
+margin-bottom: 80px;
+}
+.places-section h2 {
+font-size: 28px;
+margin-bottom: 20px;
+color: #ff6f61;
+}.places-grid {
+display: grid;
+grid-template-columns: repeat(6, 1fr);
+grid-gap: 16px;
+max-width: 1200px;
+margin: auto;
+}
+
+/* 2 card trên chiếm 3 cột mỗi cái */
+.places-grid .place-card:nth-child(1),
+.places-grid .place-card:nth-child(2) {
+grid-column: span 3;
+}
+
+/* 3 card dưới chia đều mỗi cái 2 cột */
+.places-grid .place-card:nth-child(3),
+.places-grid .place-card:nth-child(4),
+.places-grid .place-card:nth-child(5) {
+grid-column: span 2;
+}
+
+.place-card {
+position: relative;
+border-radius: 12px;
+overflow: hidden;
+aspect-ratio: 16/9; /* cố định tỷ lệ */
+}
+
+.place-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 0.3s;
+}
+.place-card:hover img {
+transform: scale(1.05);
+}
+
+/* Overlay text */
+.overlay {
+position: absolute;
+top: 8px;
+left: 12px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+
+
+ /* Ẩm thực - zigzag */
+.food-item {
+    display:flex; align-items:center; gap:20px; margin-bottom:40px;
+}
+.food-item img { width:40%; border-radius:15px; }
+.food-item:nth-child(even) { flex-direction:row-reverse; }
+.food-text { flex:1; }
+
+/* Sự kiện - timeline */
+#events {
+max-width: 800px;
+margin: 40px auto;
+padding: 20px;
+}
+
+#events h2 {
+text-align: center;
+margin-bottom: 30px;
+font-size: 26px;
+color: #333;
+position: relative;
+}
+
+.timeline {
+display: flex;
+flex-direction: column;
+gap: 20px;
+position: relative;
+padding-left: 40px;
+}
+
+.timeline::before {
+content: "";
+position: absolute;
+left: 18px;
+top: 0;
+bottom: 0;
+width: 4px;
+background: linear-gradient(to bottom, #ff6b6b, #feca57);
+border-radius: 2px;
+}
+
+.timeline-item {
+display: flex;
+align-items: flex-start;
+gap: 15px;
+text-decoration: none;
+color: inherit;
+position: relative;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+padding: 12px;
+border-radius: 10px;
+background: #fff;
+box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.timeline-item:hover {
+transform: translateX(8px);
+box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.date {
+min-width: 70px;
+background: #ff6b6b;
+color: white;
+font-weight: bold;
+padding: 8px 12px;
+border-radius: 8px;
+text-align: center;
+}
+
+.content h3 {
+margin: 0;
+font-size: 18px;
+color: #222;
+}
+
+.content p {
+margin: 4px 0 0;
+font-size: 14px;
+color: #666;
+}
+
+.hotel-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hotel-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}

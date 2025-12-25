@@ -1,0 +1,44 @@
+*{box-sizing:border-box}
+/*Flight*/
+:root{
+    --blue:#0b74d1;
+    --accent:#f7f2f2;
+    --card-border:#e6eef7;
+    --muted:#6b7280;
+    --price-color:#ff6b35;
+}
+body{ background:#f5f7fb; font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#1f2937; }
+.top-search {
+    background: linear-gradient(90deg,#0f86d8 0%, #0a6fb9 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.date-tabs .nav-link { background: rgba(255,255,255,0.06); border-radius:8px; color:white; margin-right:8px; padding:10px 14px; }
+.date-tabs .nav-link.active { background:white; color:var(--blue); font-weight:700; }
+.left-sidebar { background:white; border-radius:10px; padding:20px; box-shadow: 0 1px 0 rgba(0,0,0,0.04); height:100%; }
+.flight-card {width: 100%; background:white; border-radius: 10px; padding:18px; border:1px solid var(--card-border); margin-bottom:14px; }
+.flight-card.best { background: #fff4f4; border-color:#ffd7d7; }
+.flight-card .logo { width:48px; height:48px; display:inline-block; vertical-align:middle; margin-right:12px; }
+.flight-info { display:flex; align-items:center; gap:12px; }
+.flight-time { font-size:20px; font-weight:700; }
+.flight-duration { color:var(--muted); font-size:13px; }
+.flight-price { color:var(--price-color); font-weight:800; font-size:18px; }
+.btn-choose { background:var(--blue); color:white; border-radius:8px; padding:8px 14px; }
+.filters-section h6 { font-weight:700; margin-top:10px; }
+.left-scroll { max-height:720px; overflow:auto; padding-right:8px; }
+.pill { border-radius:14px; padding:6px 10px; background:#eef6ff; color:var(--blue); display:inline-block; font-weight:600; }
+.small-muted { color:var(--muted); font-size:13px; }
+.chip { border-radius:8px; border:1px solid #e6eef7; padding:6px 10px; background:white; }
+.tag-promo { background:#e8f9f3; color:#0a7a57; padding:6px 8px; border-radius:6px; font-weight:600; font-size:13px; }
+
+  /* Footer actions */
+  .actions{display:flex;gap:10px;align-items:center;margin-top:12px}
+  .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+  .btn.primary{background:var(--accent-2);color:white}
+  .btn.ghost{background:#eef2ff;color:var(--accent-2)}
+
+  /* small screen tweaks */
+  @media(max-width:520px){.time-big{font-size:26px}.flight-time{width:70px}}

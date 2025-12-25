@@ -1,0 +1,308 @@
+/* ===== CÀI ĐẶT CHUNG ===== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    justify-content: space-between;
+    padding: 20px 150px 20px 150px;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* ===== NAVIGATION ===== */
+.topnav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-left: 150px;
+    flex-wrap: wrap;
+}
+
+.topnav a {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.topnav a:hover{
+    background-color: rgb(245, 241, 241);
+}
+
+/* ===== SEARCH ===== */
+.header__search {
+    position: relative;
+}
+
+.header__search-input {
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+}
+
+.header__search.show .header__search-input {
+    width: 200px;
+    opacity: 1;
+    margin-left: 10px;
+}
+
+.header__search-btn-icon {
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+/* ===== BUTTONS ===== */
+.auth {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login button (transparent outline) */
+.Login, 
+.Logout {
+    background-color: transparent;
+    color: #007bff;
+    padding: 8px 24px;
+    border: 2px solid white;
+    border-radius: 8px;
+    border-color: #007bff;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.Login:hover {
+    background-color: #007bff;
+    color: white; /* Màu chủ đạo hoặc màu bạn chọn */
+}
+.Logout:hover {
+    background-color: #007bff;
+    color: white; /* Màu chủ đạo hoặc màu bạn chọn */
+}
+
+
+
+/* Register button (gradient) */
+.Register {
+    background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%);
+    color: white;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.Register:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 242, 254, 0.4);
+}
+
+
+
+/*service*/
+.service{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 30px;
+    margin-left: 180px;
+    flex-wrap: wrap;  
+}
+.service a {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #333;
+    font-size: 16px;
+}
+
+.service a:hover{
+    background-color: rgb(245, 241, 241);
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c;  /* nền tối */
+    color: #ddd;                /* chữ sáng */
+    padding: 40px 20px;
+    border-top: 3px solid #444;
+    width: 80%;
+}
+  
+footer h5 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+  
+footer ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+footer ul li a:hover {
+    color: #fff;
+}
+  
+footer .network a {
+    color: #bbb;
+    transition: all 0.3s ease;
+}
+  
+footer .network a:hover {
+    color: #0d6efd; /* xanh primary bootstrap */
+    transform: scale(1.2);
+}
+  
+footer .pay_group img {
+    background: #fff;
+    border-radius: 6px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform .25s ease; 
+}
+footer .pay_group img:hover { 
+    transform: translateY(-3px); 
+}
+footer .dowload_app img {
+    transition: transform 0.3s ease;
+}
+  
+footer .dowload_app img:hover {
+    transform: translateY(-3px);
+}
+  
+footer .dowload_app h5 {
+    color: #fff;
+}
+  
+.container > .text-center {
+    background-color: #111;
+    font-size: 0.9rem;
+}
+
+  /* Icon mạng xã hội */
+footer .network a {
+    color: #bbb;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+  
+footer .network a:hover {
+    color: #0d6efd; /* xanh primary bootstrap */
+    transform: scale(1.2);
+}
+
+  /* Tăng độ tương phản chữ & link trong footer */
+footer, footer a, footer .nav-link {
+    color: #d9d9d9 !important;
+}
+  
+footer .nav-link:hover, footer a:hover {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+  
+  /* Nếu còn class text-muted từ Bootstrap, ép lại màu trong footer */
+footer .text-muted {
+    color: #c7c7c7 !important;
+}
+  
+  /* Icon mạng xã hội (Font Awesome) */
+footer .network a {
+    font-size: 1.45rem;
+    color: #bbbbbb;
+    transition: transform .25s ease, color .25s ease;
+}
+footer .network a:hover {
+    color: #0d6efd;
+    transform: scale(1.15);
+}
+  
+  /* Nút/thẻ phương thức thanh toán */
+footer .pay_group .fa-brands,
+footer .pay_group .fa-solid {
+    font-size: 1.8rem;
+    background: #fff;
+    color: #111;             /* màu icon tối trên nền trắng */
+    width: 52px; height: 42px;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    margin-right: 8px; margin-bottom: 8px;
+}
+  
+/* Ảnh tải app/QR có hiệu ứng */
+footer .dowload_app img { 
+    transition: transform .25s ease; 
+}
+footer .dowload_app img:hover { 
+    transform: translateY(-3px); 
+}
+
+/* Nền & viền tổng thể footer */
+footer { 
+    background: #1c1c1c; border-top: 3px solid #444; 
+}
+
+.footer-wrapper {
+    background: #1c1c1c;
+    border-top: 3px solid #444;
+    width: 100%;
+}
+  
+  
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topnav {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .btn_ {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
